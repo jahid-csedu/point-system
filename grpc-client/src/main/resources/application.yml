@@ -1,0 +1,7 @@
+server:
+    port: 8081
+grpc:
+  client:
+    payment-client-service:
+      address: static://localhost:8000
+      negotiation-type: plaintext

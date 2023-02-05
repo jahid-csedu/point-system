@@ -1,0 +1,20 @@
+server:
+  port: 8085
+grpc:
+  server:
+    port: 8000
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/point_system_db
+    username: jahid
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
