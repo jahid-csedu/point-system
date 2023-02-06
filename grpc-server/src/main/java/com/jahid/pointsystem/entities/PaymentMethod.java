@@ -15,7 +15,7 @@ import java.util.Objects;
 @Entity(name = "payment_methods")
 public class PaymentMethod {
     @Id
-    @SequenceGenerator(name = "payment_methods_seq", sequenceName = "payment_methods_seq")
+    @SequenceGenerator(name = "payment_methods_seq", sequenceName = "payment_methods_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "payment_methods_seq")
     @Column(name = "id")
     private Long id;

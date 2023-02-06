@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class CardDetailServiceImpl implements CardDetailService {
 
-    private CardDetailRepository cardDetailRepository;
+    private final CardDetailRepository cardDetailRepository;
 
     @Override
     public CardDetail add(CardDetail cardDetail) {

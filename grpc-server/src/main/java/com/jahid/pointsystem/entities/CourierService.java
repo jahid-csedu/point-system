@@ -15,7 +15,7 @@ import java.util.Objects;
 public class CourierService {
 
     @Id
-    @SequenceGenerator(name = "courier_services_seq", sequenceName = "courier_services_seq")
+    @SequenceGenerator(name = "courier_services_seq", sequenceName = "courier_services_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "courier_services_seq")
     @Column(name = "id")
     private Long id;
@@ -23,7 +23,7 @@ public class CourierService {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "cheque_number", nullable = false)
+    @Column(name = "permitted", nullable = false)
     private Boolean permitted;
 
     @Override

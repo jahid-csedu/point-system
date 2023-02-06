@@ -1,9 +1,8 @@
 package com.jahid.pointsystem.entities;
 
-import javax.persistence.*;
-
 import lombok.*;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -16,13 +15,13 @@ import java.util.Objects;
 public class Payment {
 
     @Id
-    @SequenceGenerator(name = "payment_seq", sequenceName = "payment_seq")
+    @SequenceGenerator(name = "payment_seq", sequenceName = "payment_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "payment_seq")
     @Column(name = "id")
-    private Integer id;
+    private Long id;
 
     @Column(name = "customer_id", nullable = false)
-    private Long customerId;
+    private String customerId;
 
     @Column(name = "price", nullable = false)
     private Double price;

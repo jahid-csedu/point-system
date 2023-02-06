@@ -15,7 +15,7 @@ import java.util.Objects;
 public class CardDetail {
 
     @Id
-    @SequenceGenerator(name = "card_details_seq", sequenceName = "card_details_seq")
+    @SequenceGenerator(name = "card_details_seq", sequenceName = "card_details_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "card_details_seq")
     @Column(name = "id")
     private Long id;

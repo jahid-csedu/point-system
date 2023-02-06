@@ -15,7 +15,7 @@ import java.util.Objects;
 public class ChequeDetail {
 
     @Id
-    @SequenceGenerator(name = "cheque_details_seq", sequenceName = "cheque_details_seq")
+    @SequenceGenerator(name = "cheque_details_seq", sequenceName = "cheque_details_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cheque_details_seq")
     @Column(name = "id")
     private Long id;

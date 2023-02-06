@@ -16,7 +16,11 @@ public enum Error {
     ACCOUNT_NUMBER_EMPTY("POS106", "Account number can't be empty"),
     CHEQUE_NUMBER_EMPTY("POS107", "Cheque number can't be empty"),
     CARD_NO_EMPTY("POS108", "Must contain last 4 digits of the card"),
-    PAYMENT_ID_NULL("POS109", "Payment id can't be null");
+    PAYMENT_ID_NULL("POS109", "Payment id can't be null"),
+
+    COURIER_SERVICE_NOT_PERMITTED("POS110", "This courier service is not permitted"),
+    PAYMENT_SAVING_FAILED("POS111", "Failed to save the payment information"),
+    INVALID_DATE_FORMAT("POS112", "Date format is not valid");
 
 
 

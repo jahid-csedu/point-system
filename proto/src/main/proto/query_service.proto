@@ -1,0 +1,22 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.example.pointsystem.services;
+
+message Sales {
+  string datetime = 1;
+  string sales = 2;
+  double points = 3;
+}
+
+message QueryRequest {
+  string startDateTime = 1;
+  string endDateTime = 2;
+}
+
+message QueryResponse {
+  repeated Sales sales = 1;
+}
+
+service QueryService {
+  rpc querySales(QueryRequest) returns(QueryResponse) {};
+}
