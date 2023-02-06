@@ -7,6 +7,8 @@ import com.jahid.pointsystem.repositories.PaymentMethodRepository;
 import com.jahid.pointsystem.services.PaymentMethodService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,10 +16,12 @@ import java.util.List;
 @Service
 @Slf4j
 @RequiredArgsConstructor
+@CacheConfig(cacheNames = "payment_methods")
 public class PaymentMethodServiceImpl implements PaymentMethodService {
     private final PaymentMethodRepository paymentMethodRepository;
 
     @Override
+    @Cacheable
     public PaymentMethod findByName(String name) {
         log.info("Getting payment methods by name: {}", name);
         List<PaymentMethod> paymentMethods = paymentMethodRepository.findByName(name);

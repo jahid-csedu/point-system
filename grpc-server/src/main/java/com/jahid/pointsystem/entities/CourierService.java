@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 @Getter
@@ -12,7 +13,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @Builder
 @Entity(name = "courier_services")
-public class CourierService {
+public class CourierService implements Serializable {
 
     @Id
     @SequenceGenerator(name = "courier_services_seq", sequenceName = "courier_services_seq", allocationSize = 1)

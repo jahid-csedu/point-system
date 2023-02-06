@@ -5,6 +5,7 @@ import javax.persistence.*;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 @Getter
@@ -13,7 +14,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @Builder
 @Entity(name = "payment_methods")
-public class PaymentMethod {
+public class PaymentMethod implements Serializable {
     @Id
     @SequenceGenerator(name = "payment_methods_seq", sequenceName = "payment_methods_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "payment_methods_seq")
